@@ -1,0 +1,4 @@
+"D:\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S F:\Road_To_Grandmaster -B F:\Road_To_Grandmaster\cmake-build-debug
+-- Configuring done (1.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: F:/Road_To_Grandmaster/cmake-build-debug

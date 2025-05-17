@@ -1,33 +1,33 @@
 #include "iostream"
-#include "algorithm"
 #include "vector"
-
+#include "algorithm"
 using namespace std;
 
-bool check(vector<int> base,vector<int> newBox){
-    return (base[0] >= newBox[0]) && (base[1] >= newBox[1]) && (base[2] >= newBox[2]);
+bool checkUpLow(vector<int> &baseBox,vector<int> &upBox){
+    if((baseBox[0] >= upBox[0]) &&(baseBox[1] >= upBox[1]) && (baseBox[2] >= upBox[2])){
+        return true;
+    }
+    return false;
 }
 
-int solve(vector<vector<int>>& cuboids,int curr,int prev,vector<vector<int>> &dp) {
-    if(curr == cuboids.size()){
+int solve(vector<vector<int>>& cuboids,int currIndex,int prevIndex,vector<vector<int>> &dp) {
+    if(currIndex >= cuboids.size()){
         return 0;
     }
-
-    if(dp[curr][prev+1] != -1){
-        return dp[curr][prev+1];
+    if(dp[currIndex][prevIndex+1] != -1){
+        return dp[currIndex][prevIndex+1];
     }
-
     int include = 0;
-    if(prev==-1 || check(cuboids[curr],cuboids[prev])){
-        include = cuboids[curr][2] + solve(cuboids,curr+1,curr,dp);
+    if(prevIndex == -1 || checkUpLow(cuboids[currIndex],cuboids[prevIndex])){
+        include = cuboids[currIndex][2] + solve(cuboids,currIndex+1,currIndex,dp);
     }
-    int exclude = 0 + solve(cuboids,curr+1,prev,dp);
-    return dp[curr][prev+1] =  max(include,exclude);
+    int exclude = 0 + solve(cuboids,currIndex+1,prevIndex,dp);
+    return dp[currIndex][prevIndex+1] =  max(include,exclude);
 }
 
 int maxHeight(vector<vector<int>>& cuboids) {
-    for (auto &eachBox:cuboids) {
-        sort(eachBox.begin(), eachBox.end());
+    for (auto &eachRow:cuboids) {
+        sort(eachRow.begin(), eachRow.end());
     }
     sort(cuboids.begin(), cuboids.end());
     int n= cuboids.size();
@@ -36,9 +36,8 @@ int maxHeight(vector<vector<int>>& cuboids) {
 }
 
 int main(){
-    vector<vector<int>> cuboids = {{36, 46,  41},
-                                   {15, 100, 100},
-                                   {75, 91,  59},
-                                   {13, 82,  64}};
+    vector<vector<int>> cuboids = {{50, 45, 20},
+                                   {95, 37, 53},
+                                   {45, 23, 12}};
     cout<<maxHeight(cuboids);
 }

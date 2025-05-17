@@ -29,7 +29,7 @@
 
 <img src="img/Screenshot-from-2018-08-17-10-20-31.jpg" alt="maxAdj" sizes="500" width="400" height="250">
 
-[11. Maximum Sum of Non-Adjacent Elements (Recursion) ](11_max_sum_nonAdjacent_element_rec.cpp)   **[---Ques](https://www.codingninjas.com/studio/problems/maximum-sum-of-non-adjacent-elements_843261?leftPanelTab=0&utm_source=youtube&utm_medium=affiliate&utm_campaign=Lovebabbar)**
+[11. Maximum Sum of Non-Adjacent Elements (Recursion) ](11_max_sum_nonAdjacent_element_rec.cpp)   **[---Ques](https://leetcode.com/problems/maximum-sum-of-subsequence-with-non-adjacent-elements/)**
 
 [12. Maximum Sum of Non-Adjacent Elements (Memorization)](12_max_sum_nonAdjacent_element_mem.cpp)
 
@@ -91,20 +91,22 @@
 
 [34. KnapSack Problem (Space optimization - two vector)]()
 
-[35. KnapSack Problem (More Space optimization - one vector)]()
+
 <hr>
 
 <img src="img/Combination-Sum.png" alt="comSum" sizes="500">
 
-[36. Combination Sum (Recursion)](36_combination_sum_rec.cpp)     -**[-Ques](https://leetcode.com/problems/perfect-squares/submissions/1270166759/)**
+[35. Combination Sum No of ways (Recursion)](36_combination_sum_rec.cpp)     -**[-Ques](https://leetcode.com/problems/combination-sum-iv/description/)**
 
-[37. Combination Sum (Memorization)](37_combination_sum_mem.cpp)
+[36. Combination Sum No of ways (Memorization)](37_combination_sum_mem.cpp)
 
-[38. Combination Sum (Tabulation)](38_combination_sum_tab.cpp)
+[37. Combination Sum No of ways (Tabulation)](38_combination_sum_tab.cpp)
+
+[38. Combination Sum](36_combination_sum_rec.cpp)     -**[-Ques](https://leetcode.com/problems/combination-sum/description/)**
 
 <hr>
 
-[39. Perfect Squares Problem (Recursion)](39_perfect_square_rec.cpp)   -**[-Ques](https://practice.geeksforgeeks.org/problems/get-minimum-squares0538/1)**
+[39. Perfect Squares Problem (Recursion)](39_perfect_square_rec.cpp)   -**[-Ques](https://leetcode.com/problems/perfect-squares/submissions/1270166759/)**
 
 [40. Perfect Squares Problem (Memorization)](40_perfect_square_mem.cpp)
 
@@ -115,7 +117,7 @@
 
 <img src="img/1_RwF_wiPqEdRWnEVfZX2GXA.png" alt="minCostTick" sizes="500">
 
-[43. Minimum Cost for Tickets (Recursion)](43_min_cost_ticket_rec.cpp)   -**[-Ques](https://www.codingninjas.com/studio/problems/minimum-coins_2180776?leftPanelTab=0)**
+[43. Minimum Cost for Tickets (Recursion)](43_min_cost_ticket_rec.cpp)   -**[-Ques](https://leetcode.com/problems/minimum-cost-for-tickets/description/)**
 
 [44. Minimum Cost for Tickets (Memorization)](44_min_cost_ticket_mem.cpp)
 
@@ -184,71 +186,80 @@
 
 [70. Max Height Cuboid (Space optimization)](70_Max_Height_Cuboid_Opt.cpp)
 
-[71. Russian Doll (DP + BinarySearch)](71_Russian_doll_BinarySearch_DP.cpp)   -**[-Ques](https://leetcode.com/problems/russian-doll-envelopes/)**
+<hr>
+
+[71. Russian Doll (Rucursion) ](71_Russian_doll_BinarySearch_DP.cpp)   -**[-Ques](https://leetcode.com/problems/russian-doll-envelopes/)**
+
+[72. Max Height Cuboid (Tabulation)](68_Max_Height_Cuboid_Mem.cpp)
+
+[73. Max Height Cuboid (Tabulation)](69_Max_Height_Cuboid_Tab.cpp)
+
+[74. Max Height Cuboid (Space optimization)](70_Max_Height_Cuboid_Opt.cpp)
+
+[75. Max Height Cuboid (DP + BinarySearch)](70_Max_Height_Cuboid_Opt.cpp)
 
 
 <hr>
 <img src="img/sample_3_1723.png" alt="pizza" sizes="500">
 
-[72. Pizza with 3n size (Recursion)](72_Pizza_with_3n_size.cpp)      -**[-Ques](https://leetcode.com/problems/pizza-with-3n-slices/)**
+[76. Pizza with 3n size (Recursion)](72_Pizza_with_3n_size.cpp)      -**[-Ques](https://leetcode.com/problems/pizza-with-3n-slices/)**
 
-[73. Pizza with 3n size (Memorization)](73_Pizza_with_3n_size_mem.cpp)
+[77. Pizza with 3n size (Memorization)](73_Pizza_with_3n_size_mem.cpp)
 
-[74. Pizza with 3n size (Tabulation)](74_Pizza_with_3n_size_tab.cpp)
+[78. Pizza with 3n size (Tabulation)](74_Pizza_with_3n_size_tab.cpp)
 
-[75. Pizza with 3n size (Space optimization)](75_Pizza_with_3n_size_opt.cpp)
+[79. Pizza with 3n size (Space optimization)](75_Pizza_with_3n_size_opt.cpp)
 
 <hr>
 
-[76. Number of Dice Rolls with Target Sum (Recursion)](76_dice_roll_target_sum.cpp)      -**[-Ques](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/)**
+[80. Number of Dice Rolls with Target Sum (Recursion)](76_dice_roll_target_sum.cpp)      -**[-Ques](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/)**
 
-[77. Number of Dice Rolls with Target Sum (Memorization)](77_dice_roll_target_sum_mem.cpp)
+[81. Number of Dice Rolls with Target Sum (Memorization)](77_dice_roll_target_sum_mem.cpp)
 
-[78. Number of Dice Rolls with Target Sum (Tabulation)](78_dice_roll_target_sum_tab.cpp)
+[82. Number of Dice Rolls with Target Sum (Tabulation)](78_dice_roll_target_sum_tab.cpp)
 
-[79. Number of Dice Rolls with Target Sum (Space optimization)](79_dice_roll_target_sum_opt.cpp)
+[83. Number of Dice Rolls with Target Sum (Space optimization)](79_dice_roll_target_sum_opt.cpp)
 
 <hr>
 
 <img src="img/ex.jpg" alt="partitionEq" sizes="500">
 
-[80. Partition Equal Subset Sum (Recursion) ](80_Partition_equal.cpp)-**[-Ques](https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1)**
+[84. Partition Equal Subset Sum (Recursion) ](80_Partition_equal.cpp)-**[-Ques](https://leetcode.com/problems/partition-equal-subset-sum/description/)**
 
-[81. Partition Equal Subset Sum (Memorization)](81_Partition_equal_mem.cpp)
+[85. Partition Equal Subset Sum (Memorization)](81_Partition_equal_mem.cpp)
 
-[82. Partition Equal Subset Sum (Tabulation)](82_Partition_equal_tab.cpp)
+[86. Partition Equal Subset Sum (Tabulation)](82_Partition_equal_tab.cpp)
 
-[83. Partition Equal Subset Sum (Space optimization)](83_Partition_equal_opt.cpp)
-
-<hr>
-
-[84. Minimum Swap to Make Sequence Increasing (Recursion)](84_minSwapToMakeSeqIncreasing.cpp)-**[-Ques](https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/)**
-
-[85. Minimum Swap to Make Sequence Increasing (Memorization)](85_minSwapToMakeSeqIncreasing_mem.cpp)
-
-[86. Minimum Swap to Make Sequence Increasing (Tabulation)](86_minSwapToMakeSeqIncreasing_tab.cpp)
-
-[87. Minimum Swap to Make Sequence Increasing (Space optimization)]()
+[87. Partition Equal Subset Sum (Space optimization)](83_Partition_equal_opt.cpp)
 
 <hr>
 
-[88. Longest Arithmetic Subsequence (Recursion)](88_longest_arithmetic_subsequence.cpp)-**[-Ques](https://leetcode.com/problems/longest-arithmetic-subsequence/description/)**
+[88. Minimum Swap to Make Sequence Increasing (Recursion)](84_minSwapToMakeSeqIncreasing.cpp)-**[-Ques](https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/)**
 
-[89. Longest Arithmetic Subsequence (Memorization)](89_longest_arithmetic_subsequence_mem.cpp)
+[89. Minimum Swap to Make Sequence Increasing (Memorization)](85_minSwapToMakeSeqIncreasing_mem.cpp)
 
-[90. Longest Arithmetic Subsequence (Tabulation)](90_longest_arithmetic_subsequence_tab.cpp)
+[90. Minimum Swap to Make Sequence Increasing (Tabulation)](86_minSwapToMakeSeqIncreasing_tab.cpp)
+
 
 <hr>
 
-[91. Longest AP with given Difference "d" (Hashmap)]()   -**[-Ques](https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/)**
+[91. Longest Arithmetic Subsequence (Recursion)](88_longest_arithmetic_subsequence.cpp)-**[-Ques](https://leetcode.com/problems/longest-arithmetic-subsequence/description/)**
+
+[92. Longest Arithmetic Subsequence (Memorization)](89_longest_arithmetic_subsequence_mem.cpp)
+
+[93. Longest Arithmetic Subsequence (Tabulation)](90_longest_arithmetic_subsequence_tab.cpp)
+
+<hr>
+
+[94. Longest AP with given Difference "d" (Hashmap)]()   -**[-Ques](https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/)**
 <hr>
 <img src="img/uniquebstn3.jpg" alt="unqBT" sizes="500">
 
-[92. Unique Binary Search Trees or Catalan Number (Recursion)](92_unique_binary_tree.cpp)      -**[-Ques](https://leetcode.com/problems/unique-binary-search-trees/)**
+[95. Unique Binary Search Trees or Catalan Number (Recursion)](92_unique_binary_tree.cpp)      -**[-Ques](https://leetcode.com/problems/unique-binary-search-trees/)**
 
-[93. Unique Binary Search Trees or Catalan Number (Memorization)](93_unique_binary_tree_mem.cpp)
+[96. Unique Binary Search Trees or Catalan Number (Memorization)](93_unique_binary_tree_mem.cpp)
 
-[94. Unique Binary Search Trees or Catalan Number (Tabulation)](94_unique_binary_tree_tab.cpp)
+[97. Unique Binary Search Trees or Catalan Number (Tabulation)](94_unique_binary_tree_tab.cpp)
 <hr>
 <img src="img/graph.png" alt="guessNum" sizes="500">
 
@@ -334,10 +345,30 @@
 
 [130. EDIT Distance (Space optimization)](130_Edit_distance_opt.cpp)
 
+<hr>
+
 [131. Optimal Binary Search Tree](131_Optimal_Binary_Search_Tree.cpp)
 
+<hr>
+
+[132. Climbing Stair (Recursion) ](127_Edit_distance_rec.cpp)-**[-Ques](https://leetcode.com/problems/climbing-stairs/description/?envType=problem-list-v2&envId=dynamic-programming)**
+
+[133. Climbing Stair (Memorization)](128_Edit_distance_mem.cpp)
+
+[134. Climbing Stair (Tabulation)](129_Edit_distance_tab.cpp)
+
+[135. Climbing Stair (Space optimization)](130_Edit_distance_opt.cpp)
+
+<hr>
 
 
+[136. Increasing Triplet Subsequence (Recursion)](62_Longest_increasing_subsequence.cpp)     -**[-Ques](https://leetcode.com/problems/increasing-triplet-subsequence/description/)**
+
+[137. Increasing Triplet Subsequence (Memorization)](63_Longest_increasing_subsequence_mem.cpp)
+
+[138. Increasing Triplet Subsequence (Space optimization)](65_Longest_increasing_subsequence_opt.cpp)
+
+[139. Increasing Triplet Subsequence (DP + BinarySearch)](66_longest_increasing_subsequence_Binary_search_DP.cpp)
 
 
 

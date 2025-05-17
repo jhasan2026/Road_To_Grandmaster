@@ -1,26 +1,23 @@
 #include "iostream"
 #include "vector"
-#define MOD 1000000007
-
+#define MOD 100000007
 using namespace std;
 
-int add(int a,int b){
-    return (a%MOD + b%MOD)%MOD;
-}
 int mul(int a,int b){
     return (a%MOD * 1LL * b%MOD)%MOD;
 }
 
+int add(int a,int b){
+    return (a%MOD + b%MOD)%MOD;
+}
+
 int numberOfWays(int n, int k) {
+    int secPrev = k;
+    int firstPrev = add(k , mul(k,(k-1)));
 
-
-    int secondPrev = k;             //one fence can be paint with k colors
-    int firstPrev = mul(k,k);       //two fence can be paint with (k + k*(k-1)) = k^2 colors
     for (int i = 3; i <= n; ++i) {
-        int curr = add(mul(k-1, firstPrev),mul(k-1, secondPrev));       //f(n) = (k-1) * { f(n-2) + f(n-1) }
-                                                                    //f(n-2) -> solution by last two combination
-                                                                    //f(n-1) -> solution by last three combination
-        secondPrev = firstPrev;
+        int curr = mul((k-1), add(firstPrev, secPrev) );
+        secPrev = firstPrev;
         firstPrev = curr;
     }
 
@@ -28,5 +25,5 @@ int numberOfWays(int n, int k) {
 }
 
 int main(){
-    cout<<numberOfWays(4,2);
+    cout<<numberOfWays(234, 532);
 }

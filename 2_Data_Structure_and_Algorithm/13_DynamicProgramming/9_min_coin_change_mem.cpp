@@ -1,13 +1,12 @@
 #include "iostream"
 #include "vector"
-
 using namespace std;
 
-int solve(vector<int>& coins, int amount,vector<int> &dp){
-    if(amount < 0){      //if we take more than we needed
+int solve(vector<int>& coins, int amount,vector<int> &dp) {
+    if(amount < 0){
         return INT_MAX;
     }
-    if(amount == 0){        //if the amount is achieved ---> stop
+    if(amount == 0){
         return 0;
     }
 
@@ -15,26 +14,27 @@ int solve(vector<int>& coins, int amount,vector<int> &dp){
         return dp[amount];
     }
 
+    int numOfCoin = INT_MAX;
+    for (auto coin:coins) {
+        int temp = solve(coins,amount-coin,dp);
 
-    int minNoCoin = INT_MAX;
-    for (auto co:coins) {
-        int ans = solve(coins,amount - co,dp);      //get ans from every coin of the coinList
-
-        if(ans != INT_MAX){                         //if the solution is possible (not more than we need)
-            minNoCoin = min(minNoCoin, 1 + ans);    //1 for that coin and rest of the ans
+        if(temp != INT_MAX) {
+            numOfCoin = min(numOfCoin,1 + temp);
         }
     }
-    return dp[amount] = minNoCoin;
+    return dp[amount] = numOfCoin;
 }
 
 int coinChange(vector<int>& coins, int amount) {
     vector<int> dp(amount+1,-1);
-    int ans =  solve(coins,amount,dp);
-    if(ans == INT_MAX){                     //if it is not possible to make that amount of money by these coins
+    int ans = solve(coins,amount,dp);
+    if(ans == INT_MAX){
         return -1;
     }
     return ans;
 }
+
+
 int main(){
     vector<int> coins = {1, 2, 5};
     int amount = 11;

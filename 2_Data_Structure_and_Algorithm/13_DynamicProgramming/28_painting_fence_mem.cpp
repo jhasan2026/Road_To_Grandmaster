@@ -1,36 +1,34 @@
 #include "iostream"
 #include "vector"
-#define MOD 1000000007
-
+#define MOD 100000007
 using namespace std;
 
-int add(int a,int b){
-    return (a%MOD + b%MOD)%MOD;
-}
 int mul(int a,int b){
     return (a%MOD * 1LL * b%MOD)%MOD;
 }
 
+int add(int a,int b){
+    return (a%MOD + b%MOD)%MOD;
+}
+
+
 int solve(int n, int k,vector<int> &dp) {
-    if(n == 1){                 //one fence can be paint with k colors
+    if(n==1){
         return k;
     }
-    if(n == 2){                     //two fence can be paint with (k + k*(k-1)) = k^2 colors
-        return mul(k,k);
+    if(n==2){
+        return k + (k*(k-1));
     }
     if(dp[n] != -1){
         return dp[n];
     }
-    return dp[n] = add(mul(k-1, solve(n-1,k,dp)),mul(k-1, solve(n-2,k,dp)));    //f(n) = (k-1) * { f(n-2) + f(n-1) }
-                                                                                        //f(n-2) -> solution by last two combination
-                                                                                        //f(n-1) -> solution by last three combination
+    return dp[n] = mul((k-1), add(solve(n-1,k,dp), solve(n-2,k,dp)) );
 }
-
 int numberOfWays(int n, int k) {
     vector<int> dp(n+1,-1);
     return solve(n,k,dp);
 }
 
 int main(){
-    cout<<numberOfWays(4,2);
+    cout<<numberOfWays(234, 532);
 }

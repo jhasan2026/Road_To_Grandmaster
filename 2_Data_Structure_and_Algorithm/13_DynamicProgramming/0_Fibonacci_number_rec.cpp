@@ -10,5 +10,5 @@ int fib(int n){
 }
 
 int main(){
-    cout<<fib(6);
+    cout<<fib(4);
 }

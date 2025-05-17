@@ -1,43 +1,43 @@
 #include "iostream"
 #include "vector"
-#include <cstring>
+#include "algorithm"
 using namespace std;
 
-int solve(vector<int>& nums,int index,vector<int> &dp) {
+int solve(vector<int>& nums, vector<vector<int>>& queries,int index) {
     if(index >= nums.size()){
         return 0;
     }
-    if(dp[index] != -1){
-        return dp[index];
-    }
-    int include = nums[index] + solve(nums,index+2,dp);
-    int exclude = 0 + solve(nums,index+1,dp);
-    return dp[index] = max(include,exclude);
+
+    int include = nums[index] + solve(nums,queries,index+2);
+    int exclude = 0 + solve(nums,queries,index+1);
+    return max(include,exclude);
 }
 
+bool cmp(vector<int> &v1,vector<int> &v2){
+    if(v1[0] < v2[0]){
+        return true;
+    }
+    return false;
+}
 
-long long maximumSumSubsequence(vector<int>& nums, vector<vector<int>>& queries) {
-    long long sum = 0;
-    vector<int> dp(nums.size()+1,-1);
-
+int maximumSumSubsequence(vector<int>& nums, vector<vector<int>>& queries) {
+    sort(queries.begin(), queries.end(),cmp);
+    int sum = 0;
+    int n = nums.size(), m= queries.size();
+    vector<vector<int>> dp(n+1,vector<int>(m+1,-1));
     for (int i = 0; i < queries.size(); ++i) {
+        int save = nums[queries[i][0]];
         nums[queries[i][0]] = queries[i][1];
-        sum += solve(nums,0,dp);
-        memset(dp.data(), -1, dp.size() * sizeof(int));
+        sum += solve(nums,queries,0);
+        nums[queries[i][0]] = save;
     }
     return sum;
 }
 
 int main(){
-    vector<int> nums = {4, 0, -1, -2, 3, 1, -1};
-    vector<vector<int>> queries = {{3,1},
-                                   {0,-2},
-                                   {1,-1},
-                                   {0,-2},
-                                   {5,4},
-                                   {6,-3},
-                                   {6,-2},
-                                   {2,-1}};;
-
+    vector<int> nums = {3,5,9};
+    vector<vector<int>> queries = {{1,-2},
+                                   {0,-3}};
     cout<<maximumSumSubsequence(nums,queries);
+
 }
